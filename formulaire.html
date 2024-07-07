@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Formulaire</h1>
+    <form method="post" action="formulaire.php">
+        <fieldset>
+            <div class="conteneur">
+                <div class="nom">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom">
+                </div>
+                <p></p>
+                <div class="prenom">
+                    <label for="prenom">Prenom :</label>
+                    <input type="text" id="prenom" name="prenom">
+                </div>
+                <p></p>
+                <div class="date">
+                    <label for="date">Date de Naissance :</label>
+                    <input type="date" id="date" name="date_de_Naissance">
+                </div>
+                <p></p>
+                <div class="phone">
+                    <label for="tele">Télephone :</label>
+                <input type="text" id="tele" name="Telephone" >
+                </div>
+                <p></p>
+                <div class="sexe">
+                    <label for="">Sexe :</label>
+                    <label for="homme">Homme</label>
+                    <input type="radio" id="homme" name="sexe">
+                    <label for="femme">Femme</label>
+                    <input type="radio" id="femme" name="sexe">
+                </div>
+                <p></p>
+                <div class="online">
+                    <label for="ligne">en ligne</label>
+                    <input type="checkbox" id="ligne" name="en ligne">
+                </div>
+                <p></p>
+                <div class="diplome">
+                    <label for="">Diplome</label>
+                    <select name="Diplome" id="dip">
+                        <option value="DEF">DEF</option>
+                        <option value="Bac">Bac</option>
+                        <option value="Licence">Licence</option>
+                        <option value="Master">Master</option>
+                        <option value="Doctorat">Doctorat</option>
+                    </select>
+                </div>
+                <p></p>
+                <div class="sm">
+                    <label for="">Situation Matrimoniale </label>
+                    <select name="" id="">
+                        <option value="Celibataire">Celibataire</option>
+                        <option value="Marie">Marie(e)</option>
+                        <option value="Divorcer">Divorcer</option>
+                    </select>
+                </div>
+                <p></p>
+                <div class="photo">
+                    <label for="photo">Photo d'Identite:</label>
+                    <input type="file" id="photo" name="identite">
+                </div>
+                <div class="button">
+                    <button type="submit" name= "envoyer">Enregistrer</button>
+                </div>
+                </fieldset>
+                
+                
+                
+            </div>
+        
+    </form>
+</body>
+</html>
