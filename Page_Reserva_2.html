@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Reservation step2</title>
+   <!-- <link rel="stylesheet" href="Page_Reserva2.css"> -->
+    <style>
+         * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+    overflow: hidden;
+    }
+    
+    body{
+        background-color: #2632df;
+    }
+    #header {
+        position: relative;
+        min-height: 100px;
+        z-index: 100;
+         background-color: #06063d;
+
+    }
+ .LOGO {
+        position: absolute;
+        top: 1px;
+        width: 220px;
+    }
+            .slogan{
+                color: floralwhite;
+                position: absolute;
+                font-size: 14px;
+                left:90px;
+                top: 65px;
+                font-weight: bold;
+                font-style: italic;
+
+            }
+
+    button {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 3px 3px #000;
+        font-size: 1.5em;
+        border-radius: 20px;
+        padding: 5px 25px;
+        color: #fff;
+        background: #0a5;
+    }
+
+    button:hover {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        background-color: #A01;
+        color: #fff;
+        box-shadow: 3px 3px #000;
+        font-size: 1.5em;
+        border-radius: 20px;
+        font-weight: bold;
+
+    }
+    .Nb_personne{
+        position: relative;
+        padding: 30px;
+        background-color: dodgerblue;
+    }
+    #nb {/*l'id de l'input nb reservation*/
+        position: relative;
+        left: 45%;
+        top: 15px;
+        padding: 10px;
+        box-shadow: 2px 2px 2px 2px black ;
+        border-radius: 10px;
+        
+        }
+    #Nb_personne {/*l'id du label Nb_personne*/
+        position: relative;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: clamp(12px,5vw,2em);
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+        left: 25%;
+    }
+    .B_allez_simple{/*Class du div allez_simple*/
+        position:   absolute;
+        padding: 50px;
+        width: 60%;
+        min-height: 15%;
+        background-color: dodgerblue;
+        top: 45%;
+        left: 20%;
+        border: 2px solid #fff;
+        border-radius: 20px;
+    }
+    .B_allez_retour {/*Class du div allez_retour*/
+        position:   absolute;
+        padding: 50px;
+        width: 60%;
+        min-height: 15%;
+        background-color: dodgerblue;
+        top: 65%;
+        left: 20%;
+        border: 2px solid #fff;
+        border-radius: 20px;
+    }
+    #B_allez_simple{/*l'id pour le nom le label Billet Allez Simple */
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+    }
+    #B_allez_retour {/*l'id pour le nom le label Billet Allez Retour*/
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+    }
+    #Billet_allez {/*l'id pour le input Billet Allez Simple*/
+        position: absolute;
+            left: 56%;
+            width: 20px;
+            height: 20px;
+            top: 35%;
+    }
+
+    #Billet_allez_R{/*l'id pour le input Billet Allez Retour*/
+        position: absolute;
+            left: 56%;
+            width: 20px;
+            height: 20px;
+            top: 35%;
+    }
+    li {
+        list-style: none;
+    }
+
+    .acc {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 41%;
+        top: 30px;
+        font-size: 20px;
+        z-index: 100;
+    }
+
+    .acc:hover {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        padding: 5px;
+        color: #fff;
+        text-decoration: none;
+        left: 41%;
+        top: 30px;
+        font-size: 20px;
+        transition: 0.5s ease-in-out;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        background-color: #0a5;
+
+    }
+
+    .horaire {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 51%;
+        top: 30px;
+        font-size: 20px;
+        z-index: 100;
+
+    }
+
+    .horaire:hover {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 51%;
+        top: 30px;
+        font-size: 20px;
+        transition: 0.5s ease-in-out;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        background-color: #0a5;
+        padding: 5px;
+    }
+
+    .place {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 60%;
+        top: 30px;
+        font-size: 20px;
+        z-index: 100;
+
+    }
+
+    .place:hover {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 60%;
+        top: 30px;
+        font-size: 20px;
+        transition: 0.5s ease-in-out;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        background-color: #0a5;
+        padding: 5px;
+    }
+
+    .propos {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 75%;
+        top: 30px;
+        font-size: 20px;
+        z-index: 100;
+
+    }
+
+    .propos:hover {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 75%;
+        top: 30px;
+        font-size: 20px;
+        transition: 0.5s ease-in-out;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        background-color: #0a5;
+        padding: 5px;
+    }
+
+    .reser {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 91%;
+        top: 30px;
+        font-size: 20px;
+        z-index: 100;
+
+    }
+
+    .reser:hover {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 91%;
+        top: 30px;
+        font-size: 20px;
+        transition: 0.5s ease-in-out;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        background-color: #0a5;
+        padding: 5px;
+    }
+    .MENU_CLOSE,.MENU_OPEN{
+        display: none;
+    }
+    @media (max-width:1020px){
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+            .MENU_CLOSE,.MENU_OPEN{
+        display: block;
+    }
+body{
+   background-color:#2632df;
+
+}
+    #header {
+        position: relative;
+        min-height: 102px;
+        z-index: 100;
+         background-color: #06063d;
+
+    }
+        .logo{
+            position: absolute;
+            top:30px;
+            transform: translate(0, -15px);
+            width: 300px;
+        }
+         #ACC{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                position: absolute;
+                color: #fff;
+                margin: 0;
+                text-decoration: none;
+                left: 1%;
+                top: 30px;
+                font-size: 20px;
+                padding: 5px;
+                transition: all 2s ease;
+                width: 50vw;
+                text-align: center;
+            }
+            #ACC:hover {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                padding: 5px;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 30px;
+                font-size: 20px;
+                transition: 0.5s ease-in-out;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                background-color: #0a5;
+                width: 50vw;
+                text-align: center;
+            }
+
+            #horaire {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 75px;
+                font-size: 20px;
+                text-align: center;
+                width: 50vw;
+                transition: all 2s ease;
+            }
+
+            #horaire:hover {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 75px;
+                font-size: 20px;
+                transition: 0.5s ease-in-out;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                background-color: #0a5;
+                padding: 5px;
+                width: 50vw;
+            }
+
+            #place {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 120px;
+                font-size: 20px;
+                text-align: center;
+                width: 50vw;
+                transition: all 2s ease;
+            }
+
+            #place:hover {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 120px;
+                font-size: 20px;
+                transition: 0.5s ease-in-out;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                background-color: #0a5;
+                padding: 5px;
+                text-align: center;
+                width: 50vw;
+            }
+
+            #propos {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 165px;
+                font-size: 20px;
+                width: 50vw;
+                text-align: center;
+                transition: all 2s ease;
+            }
+
+            #propos:hover {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 165px;
+                font-size: 20px;
+                transition: 0.5s ease-in-out;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                background-color: #0a5;
+                padding: 5px;
+                text-align: center;
+                width: 50vw;
+            }
+
+            #reser {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left:1%;
+                top: 210px;
+                font-size: 20px;
+                text-align: center;
+                width: 50vw;
+                transition: 0.5s ease-in-out;
+            }
+            #reser:hover {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left:1%;
+                top: 210px;
+                font-size: 20px;
+                transition: 0.5s ease-in-out;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                background-color: #0a5;
+                padding: 5px;
+                text-align: center;
+                width: 50vw;
+            }
+            .Nb_personne{
+                top: 16%;
+                position: absolute;
+                border: 2px solid #fff;
+                height: 20%;
+                width: 100%;
+                padding: 30px;
+            }
+             #Nb_personne {
+                top: 1%;
+                position: absolute;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font: size 1.5em;
+                font-weight: bold;
+                color: #fff;
+                text-align: center;
+                left: 5%;
+                margin: 1%;
+             }
+        #nb {
+            /*l'id de l'input nb reservation*/
+                position: absolute;
+                margin: 1%;
+                left: 35%;
+                top: 70px;
+                margin-bottom: 30px;
+                box-shadow: 2px 2px 2px 2px black;
+                border-radius: 10px;
+                width: 150px;
+                /* visibility: hidden; */
+            }
+        #Menu_Burger{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            left: 85%;
+            top: 25px;
+            transition: all 0.5s ease;
+        }
+        #Menu_Burger:hover {
+                position: relative;
+                width: 50px;
+                height: 50px;
+                background-color: #c2c0c0;
+                cursor: pointer;
+                left: 85%;
+                top: 25px;
+                border-radius: 50px;
+                transition: all 0.5s ease;
+        }
+        #Menu_Burger span:nth-child(2){
+            position: absolute;
+            width: 45px;
+            height: 3px;
+            background-color: dodgerblue;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+
+        }
+        #Menu_Burger span:nth-child(1) {
+            position: absolute;
+            width: 45px;
+            height: 3px;
+            background-color: dodgerblue;
+            top: 30%;
+            left: 5%;
+            transform: translateY(-50%);
+        
+        }
+        #Menu_Burger span:nth-child(3) {
+            position: absolute;
+            width: 45px;
+            height: 3px;
+            background-color: dodgerblue;
+            top: 70%;
+            left: 5%;
+            transform: translateY(-50%);
+        }
+
+         #Billet_allez_R {
+            /*l'id pour le nom le input Billet Allez Retour*/
+            position: relative;
+            left: 55%;
+            width: 20px;
+            height: 20px;
+            top: 35%;
+        }
+                button {
+                    position: absolute;
+                    top: 95%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    cursor: pointer;
+                    font-weight: bold;
+                    box-shadow: 3px 3px #000;
+                    font-size: 1.5em;
+                    border-radius: 20px;
+                    padding: 5px 25px;
+                    color: #fff;
+                    background: #0a5;
+                    transition: all 0.4s ease-in;
+                }
+        
+                button:hover {
+        
+                    position: absolute;
+                    top: 95%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    cursor: pointer;
+                    background-color: #A01;
+                    color: #fff;
+                    box-shadow: 3px 3px #000;
+                    font-size: 1.5em;
+                    border-radius: 20px;
+                    font-weight: bold;
+                    transition: all 0.4s ease-in;
+                }
+                /* footer{
+                    background-color: #262626;
+                    min-height:10%;
+                    
+                } */
+            .fenetre{
+                position: absolute;
+                width: 300px;
+                height: 100vh;
+                background-color: #06063d;
+                right: 1px;
+                z-index: 5;
+                visibility: visible;
+                transform: translateY(-100%);
+            }
+            .MENU_CLOSE{
+                width:55px;
+                height:55px;
+                position: absolute;
+                right: 20px;
+                border-radius: 100px;
+                top: 25px;
+                cursor: pointer;
+                visibility: hidden;
+            }
+            .MENU_OPEN{
+                width:55px;
+                height:55px;
+                position: absolute;
+                right: 20px;
+                border-radius: 120px;
+                top: 25px;
+                cursor: pointer;
+                background-color:rgb(57, 58, 57) ;
+                visibility: visible;
+            }
+    .B_allez_simple{/*Class du div allez_simple*/
+        position: absolute;
+        padding: 10px;
+        background-color: dodgerblue;
+        border: 2px solid#fff;
+        top: 42%;
+        height: 100px;
+        width: 90%;
+        left:30px;
+    }
+    .B_allez_retour {/*Class du div allez_retour*/
+        position: absolute;
+        padding: 10px;
+        background-color: dodgerblue;
+        top: 68%;
+        border: 2px solid #fff;
+        height:100px;
+        width: 90%;
+        left: 30px;
+    }
+    nav{
+        background-color:#0a5;
+    }
+    #B_allez_simple{/*l'id pour le nom le label Billet Allez Simple */
+        position: absolute;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        left: 5%;
+        color: #fff;
+        top: 30%;
+    }
+    #B_allez_retour {/*l'id pour le nom le label Billet Allez Retour*/
+        position: absolute;
+         text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+        left: 5%;
+        top: 30%;
+    }
+    #Billet_allez {/*l'id pour le input Billet Allez Simple*/
+        position: absolute;
+        left: 55%;
+        width: 20px;
+        height: 20px;
+        top:35%;
+    }
+  }
+  /* body,footer{
+    background-color: dodgerblue;
+  } */
+    </style>
+</head>
+<body>
+    <header id="header">
+        <img src="picture/TRANSOFT_version_origi.PNG" class="LOGO" alt="MON_LOGO">
+        <p class="slogan">Do goodtravel</p>
+        <img src="picture/menu_A.jpg" alt="MENU_CLOSE" class="MENU_OPEN">
+        <img src="picture/menu_close.jpg" alt="MENU_CLOSE" class="MENU_CLOSE" >
+    </header>
+    <div class="fenetre">
+        <ul>
+            <li id="li_acc">
+                <a href="Page_Accueil.html" class="acc" id="ACC">Accueil</a>
+            </li>
+            <li id="li_acc">
+                <a href="Horaires.html" class="horaire" id="horaire">Horaires</a>
+            </li>
+            <li id="li_acc">
+                <a href="place_disponible.php" class="place" id="place">Place disponible</a>
+            </li>
+            <li id="li_acc">
+                <a href="Page_a_propos.html" class="propos" id="propos">A propos de nous</a>
+            </li>
+            <li id="li_acc">
+                <a href="Page_Reserva_1.html" class="reser" id="reser">Reservation</a>
+            </li>
+        </ul>
+    </div>
+    
+    <nav>
+        <form action="" method="post">
+            <div class="Nb_personne">
+                <label for="nombre" id="Nb_personne">Vous reservez pour combien de personne ?</label>
+                <br><input type="number" name="nombre" id="nb" placeholder="mettez un nombre ici" min="1" max="10" required>
+            </div>
+            
+            <div class="B_allez_simple">
+                <label for="allez_ease" id="B_allez_simple">Billet Allez Simple </label>
+                <input type="radio" name="billet" id="Billet_allez">
+            </div>
+            
+            <div class="B_allez_retour">
+                <label for="allez_retour" id="B_allez_retour">Billet Allez-Retour </label>
+                <input type="radio" name="billet" id="Billet_allez_R">
+            </div>
+        </form>
+        <!-- <div class="window">
+            <ul>
+                <li>
+                    <a href="Page_Accueil.html">Home</a>
+                </li>
+            </ul>
+        </div> -->
+        <a href="Page_Reserva_3.html">
+            <button type="button">Suivant</button>
+        </a>
+    </nav>
+    <!-- <footer>
+    </footer> -->
+   <script>
+                const menu_close = document.querySelector('.MENU_CLOSE');
+                    const menu_open = document.querySelector('.MENU_OPEN');
+                    const Window = document.querySelector('.fenetre');
+                    menu_open.addEventListener('click', () => {
+                        Window.style.transform = "translateY(0.5%)";
+                        Window.style.transition = "0.5s ease-in-out";
+                        menu_open.style.visibility = "hidden";
+                        menu_close.style.visibility = "visible";
+                    })
+                    menu_close.addEventListener('click', () => {
+                        Window.style.transform = "translateY(-100%)";
+                        Window.style.transition = "0.5s ease-in-out";
+                        menu_open.style.visibility = "visible";
+                        menu_close.style.visibility = "hidden";
+                    })
+   </script>
+</body>
+</html>

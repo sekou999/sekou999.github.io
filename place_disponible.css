@@ -1,0 +1,306 @@
+
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       overflow: hidden;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+
+   body {
+       background-color: #2632df;
+
+   }
+
+   #header {
+       position: relative;
+       min-height: 100px;
+       bottom: 15px;
+       background-color: #433f3f;
+
+   }
+
+   .reservation {
+       position: relative;
+       padding: 40px;
+       background-color: dodgerblue;
+       bottom: 15px;
+   }
+
+   h2 {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       color: #fff;
+       text-align: center;
+       border: 2px solid #fff;
+       border-radius: 10px;
+       position: relative;
+       width: 770px;
+       left: 20%;
+   }
+
+   img {
+       position: relative;
+       top: 10px;
+   }
+
+   li {
+
+       list-style: none;
+   }
+
+   .acc {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       margin: 0;
+       position: absolute;
+       color: #fff;
+       text-decoration: none;
+       left: 41%;
+       top: 35px;
+       font-size: 20px;
+
+   }
+
+   .acc:hover {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       margin: 0;
+       position: absolute;
+       padding: 5px;
+       color: #fff;
+       text-decoration: none;
+       left: 41%;
+       top: 35px;
+       font-size: 20px;
+       transition: 0.5s ease-in-out;
+       border: 2px solid #fff;
+       border-radius: 10px;
+       background-color: #0a5;
+
+   }
+
+   .horaire {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       margin: 0;
+       position: absolute;
+       color: #fff;
+       text-decoration: none;
+       left: 51%;
+       top: 35px;
+       font-size: 20px;
+   }
+
+   .horaire:hover {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       margin: 0;
+       position: absolute;
+       color: #fff;
+       text-decoration: none;
+       left: 51%;
+       top: 35px;
+       font-size: 20px;
+       transition: 0.5s ease-in-out;
+       border: 2px solid #fff;
+       border-radius: 10px;
+       background-color: #0a5;
+       padding: 5px;
+   }
+
+
+   .place {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       margin: 0;
+       position: absolute;
+       color: #fff;
+       text-decoration: none;
+       left: 60%;
+       top: 35px;
+       font-size: 20px;
+       transition: 0.5s ease-in-out;
+       border: 2px solid #fff;
+       border-radius: 10px;
+       background-color: #0a5;
+       padding: 5px;
+   }
+
+   .propos {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       margin: 0;
+       position: absolute;
+       color: #fff;
+       text-decoration: none;
+       left: 75%;
+       top: 35px;
+       font-size: 20px;
+   }
+
+   .propos:hover {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       margin: 0;
+       position: absolute;
+       color: #fff;
+       text-decoration: none;
+       left: 75%;
+       top: 35px;
+       font-size: 20px;
+       transition: 0.5s ease-in-out;
+       border: 2px solid #fff;
+       border-radius: 10px;
+       background-color: #0a5;
+       padding: 5px;
+   }
+
+   .reser {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       margin: 0;
+       position: absolute;
+       color: #fff;
+       text-decoration: none;
+       left: 91%;
+       top: 35px;
+       font-size: 20px;
+   }
+
+   .reser:hover {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       margin: 0;
+       position: absolute;
+       color: #fff;
+       text-decoration: none;
+       left: 91%;
+       top: 35px;
+       font-size: 20px;
+       transition: 0.5s ease-in-out;
+       border: 2px solid #fff;
+       border-radius: 10px;
+       background-color: #0a5;
+       padding: 5px;
+   }
+
+   /* -------------------------------input edit----------------*/
+
+
+
+
+   #ld {
+       position: relative;
+       left: 10px;
+       padding: 5px;
+       border-radius: 10px;
+       outline: 2px solid #0a5;
+       width: 170px;
+
+   }
+
+   #la {
+       position: relative;
+       left: 360px;
+       padding: 5px;
+       border-radius: 10px;
+       outline: 2px solid #0a5;
+       width: 170px;
+       bottom: 50px;
+   }
+
+
+   /* ------------------- Label_edit---------------------- */
+   .la {
+       position: relative;
+       padding: 5px 12px;
+       border: 2px solid #ffffff;
+       border-radius: 10px;
+       left: 350px;
+       bottom: 50px;
+       
+
+   }
+
+
+   .ld {
+       position: relative;
+       padding: 5px 12px;
+       border: 2px solid #fff;
+       border-radius: 10px;
+   }
+
+   .la:hover {
+       position: relative;
+       padding: 5px 12px;
+       background-color: #0a5;
+       border: 2px solid #fff;
+
+   }
+
+   .ld:hover {
+       position: relative;
+       background-color: #0a5;
+       border: 2px solid #fff;
+
+   }
+
+
+
+
+
+
+
+
+   form {
+       position: absolute;
+       width: 700px;
+       padding: 30px;
+   }
+
+
+
+   .disponibiliter_B {
+       position: relative;
+       min-height: 15vh;
+       min-width: 100vw;
+       background-color:#a01;
+       bottom: 15px;
+       border: 1px solid #fff;
+        
+   }
+
+
+button {
+       position: relative;
+       right: 40px;
+       border: 2px solid #FFF;
+       border-radius: 10px;
+       background-color: #0a6;
+       width: 100px;
+       padding: 5px;
+       cursor: pointer;
+       left: 55%;
+       color: #fff;
+       bottom: 70px;
+   }
+
+button:hover {
+       position: relative;
+       right: 20px;
+       border: 2px solid #FFF;
+       border-radius: 10px;
+       background-color: #A01;
+       width: 100px;
+       padding: 5px;
+       cursor: pointer;
+       left: 55%;
+       color: #fff;
+       bottom: 70px;
+   }
+
+   #oui {
+       position: relative;
+       font-weight: bold;
+       left: 45vw;
+       font-size: 1.5em;
+       width: 150px;
+   }
+
+   .MENU_CLOSE,.MENU_OPEN {
+       visibility: hidden;
+       display: none;
+   }
+
+  

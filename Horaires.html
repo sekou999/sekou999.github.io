@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horaires des voyages</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        #header {
+            position: relative;
+            min-height: 115px;
+            bottom: 5px;
+            background-color: #06063d;
+            width: 100vw;
+            /* position:fixed; */
+
+        }
+        img{
+            position: absolute;
+            top: 10px;
+        }
+                li {
+            list-style: none;
+        }
+
+        .acc {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            position: absolute;
+            color: #fff;
+            text-decoration: none;
+            left: 41%;
+            top: 35px;
+            font-size: 20px;
+
+        }
+ .LOGO {
+        position: absolute;
+        top: 1px;
+        width: 220px;
+    }
+                   .slogan{
+                color: floralwhite;
+                position: absolute;
+                font-size: 14px;
+                left:90px;
+                top: 65px;
+                font-weight: bold;
+                font-style: italic;
+
+               }
+        .acc:hover {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            position: absolute;
+            padding: 5px;
+            color: #fff;
+            text-decoration: none;
+            left: 41%;
+            top: 35px;
+            font-size: 20px;
+            transition: 0.5s ease-in-out;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background-color: #0a5;
+
+        }
+
+        /* .horaire {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            position: absolute;
+            color: #fff;
+            text-decoration: none;
+            left: 51%;
+            top: 35px;
+            font-size: 20px;
+        } */
+
+        .horaire{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            position: absolute;
+            color: #fff;
+            text-decoration: none;
+            left: 51%;
+            top: 35px;
+            font-size: 20px;
+            transition: 0.5s ease-in-out;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background-color: #0a5;
+            padding: 5px;
+        }
+
+        .place {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            position: absolute;
+            color: #fff;
+            text-decoration: none;
+            left: 60%;
+            top: 35px;
+            font-size: 20px;
+        }
+
+        .place:hover {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            position: absolute;
+            color: #fff;
+            text-decoration: none;
+            left: 60%;
+            top: 35px;
+            font-size: 20px;
+            transition: 0.5s ease-in-out;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background-color: #0a5;
+            padding: 5px;
+        }
+
+        .propos {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            position: absolute;
+            color: #fff;
+            text-decoration: none;
+            left: 75%;
+            top: 35px;
+            font-size: 20px;
+        }
+
+        .propos:hover {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            position: absolute;
+            color: #fff;
+            text-decoration: none;
+            left: 75%;
+            top: 35px;
+            font-size: 20px;
+            transition: 0.5s ease-in-out;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background-color: #0a5;
+            padding: 5px;
+        }
+        .reser {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            position: absolute;
+            color: #fff;
+            text-decoration: none;
+            left: 90%;
+            top: 35px;
+            font-size: 20px;
+        }
+
+        .reser:hover {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            position: absolute;
+            color: #fff;
+            text-decoration: none;
+            left: 90%;
+            top: 35px;
+            font-size: 20px;
+            transition: 0.5s ease-in-out;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background-color: #0a5;
+            padding: 5px;
+        }
+       span{
+            position: absolute;
+            color: #fff;
+            transform: translateX(-300px);
+            animation: horaire 7s ease-in-out 0.3s infinite  ;
+            bottom: 10px;
+        }
+        @-webkit-keyframes horaire{
+            100%{
+                transform: translateX(800px);
+                transition: 7s ease;
+            }
+        }
+        .reservation {
+            position: relative;
+            padding: 30px;
+            background-color:  #fff;
+            bottom: 10px;
+            width: 100vw;
+            min-height: 200px;
+        }
+        h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 15px;
+            position: relative;
+            width: 770px;
+            left: 20%;
+            background-color:  #0a5;
+            padding: 25px;
+            font-size: 2em;
+        }
+        .Tableau{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: absolute;
+            background-color:dodgerblue;
+            width: 100vw;
+            height: 100vh;
+            padding-top: 10px;
+            border-radius: 10px;
+            padding-left: 10px;
+            top: 32vh;
+            right: 5px;
+        }
+        /* ------Axe BKO - SGOU--------------------------------------------- */
+        h3{
+            display: inline-block;
+        }
+        #dep_A,#dep_B,#dep_C,#dep_D,#dep_E,#dep_F,#dep_G,#dep_H{
+            color: #fff;
+            font-size: 2em;
+        }
+        #dest_A,#dest_B,#dest_C,#dest_D,#dest_E,#dest_F,#dest_G,#dest_H{
+            color: #fff;
+            font-size: 2em;
+        }
+        .A{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 420px;
+            padding: 10px;
+            top: 10px;
+            height: 60px;
+            /* bottom: 10px;
+            margin-bottom: 10px; */
+        }
+        h3{
+            position: relative;
+            bottom: 5px;
+        }
+        .dep_jour_A{
+            position: absolute;
+            left: 450px;
+            border: 2px solid #fff;
+            top: 10px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        .dep_soir_A{
+            position: absolute;
+            left: 900px;
+            border: 2px solid #fff;
+            top: 10px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        /* ------Axe BKO -ABJN---------------------------------------------- */
+        .B{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 420px;
+            padding: 10px;
+            top: 80px;
+            height: 60px;
+            
+        }
+        h3{
+            position: relative;
+            bottom: 5px;
+        }
+        .dep_jour_B{
+            position: absolute;
+            left: 450px;
+            border: 2px solid #fff;
+            top: 80px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+
+        }
+        .dep_soir_B{
+            position: absolute;
+            left: 900px;
+            border: 2px solid #fff;
+            top: 80px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+
+        }
+        /* ------Axe BKO -ABJN---------------------------------------------- */
+        .C{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 420px;
+            padding: 10px;
+            top: 150px;
+            height: 60px;
+            
+        }
+        h3{
+            position: relative;
+            bottom: 5px;
+        }
+        .dep_jour_C{
+            position: absolute;
+            left: 450px;
+            border: 2px solid #fff;
+            top: 150px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+
+        }
+        .dep_soir_C{
+            position: absolute;
+            left: 900px;
+            border: 2px solid #fff;
+            top: 150px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+
+        }
+        /* ------Axe BKO - SKSO---------------------------------------------- */
+        .D{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 420px;
+            padding: 10px;
+            top: 220px;
+            height: 60px;
+            
+        }
+        h3{
+            position: relative;
+            bottom: 5px;
+        }
+        .dep_jour_D{
+            position: absolute;
+            left: 450px;
+            border: 2px solid #fff;
+            top: 220px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+
+        }
+        .dep_soir_D{
+            position: absolute;
+            left: 900px;
+            border: 2px solid #fff;
+            top: 220px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        /* ------Axe BKO - SGOU--------------------------------------------- */
+        .E{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 420px;
+            padding: 10px;
+            top: 290px;
+            height: 60px;
+            /* bottom: 10px; */
+            /* margin-bottom: 10px; */
+        }
+        h3{
+            position: relative;
+            bottom: 5px;
+        }
+        .dep_jour_E{
+            position: absolute;
+            left: 450px;
+            border: 2px solid #fff;
+            top: 290px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        .dep_soir_E{
+            position: absolute;
+            left: 900px;
+            border: 2px solid #fff;
+            top: 290px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        /* ------Axe BKO -ABJN---------------------------------------------- */
+        .F{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 420px;
+            padding: 10px;
+            top: 360px;
+            height: 60px;
+            
+        }
+        h3{
+            position: relative;
+            bottom: 5px;
+        }
+        .dep_jour_F{
+            position: absolute;
+            left: 450px;
+            border: 2px solid #fff;
+            top: 360px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+
+        }
+        .dep_soir_F{
+            position: absolute;
+            left: 900px;
+            border: 2px solid #fff;
+            top: 360px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+
+        }
+        /* ------Axe BKO -ABJN---------------------------------------------- */
+        .G{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 420px;
+            padding: 10px;
+            top: 430px;
+            height: 60px;
+            
+        }
+        h3{
+            position: relative;
+            bottom: 5px;
+        }
+        .dep_jour_G{
+            position: absolute;
+            left: 450px;
+            border: 2px solid #fff;
+            top: 430px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+
+        }
+        .dep_soir_G{
+            position: absolute;
+            left: 900px;
+            border: 2px solid #fff;
+            top: 430px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+
+        }
+        /* ------Axe BKO - SKSO---------------------------------------------- */
+        .H{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 420px;
+            padding: 10px;
+            top: 500px;
+            height: 60px;
+            
+        }
+        h3{
+            position: relative;
+            bottom: 5px;
+        }
+        .dep_jour_H{
+            position: absolute;
+            left: 450px;
+            border: 2px solid #fff;
+            top: 500px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+
+        }
+        .dep_soir_H{
+            position: absolute;
+            left: 900px;
+            border: 2px solid #fff;
+            top: 500px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+
+
+
+/* ------------------------------------------------------------------------------ */
+        label{
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        select{
+            position: relative;
+            width: 200px;
+            padding: 5px;
+            bottom: 5px;
+        }
+        option{
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .MENU_OPEN,.MENU_CLOSE{
+            display: none;
+            visibility: hidden;
+        }
+        @media (max-width:1080px) {
+                   * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           overflow-x: hidden;
+           
+        }
+        
+        body {
+            background-color: #433f3f;
+            overflow:auto;
+            width: 100vw;
+            height: 100vh;
+       }
+
+       #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10%;
+            z-index: 100;
+           min-height: 100px;
+           /* bottom: 15px; */
+           background-color: #06063d;
+
+       }
+/* body{
+    background-color: dodgerblue;
+} */
+       #ACC {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           position: absolute;
+           color: #fff;
+           margin: 0;
+           text-decoration: none;
+           left: 1%;
+           top: 30px;
+           font-size: 20px;
+           padding: 5px;
+           transition: all 2s ease;
+           width: 50vw;
+           text-align: center;
+       }
+
+       #ACC:hover {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           margin: 0;
+           position: absolute;
+           padding: 5px;
+           color: #fff;
+           text-decoration: none;
+           left: 1%;
+           top: 30px;
+           font-size: 20px;
+           transition: 0.5s ease-in-out;
+           border: 2px solid #fff;
+           border-radius: 10px;
+           background-color:#0a5;
+           width: 50vw;
+           text-align: center;
+       }
+
+       #horaire {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           margin: 0;
+           position: absolute;
+           color: #fff;
+           text-decoration: none;
+           left: 1%;
+           top: 75px;
+           font-size: 20px;
+           text-align: center;
+           width: 50vw;
+           transition: all 2s ease;
+       }
+
+       #horaire:hover {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           margin: 0;
+           position: absolute;
+           color: #fff;
+           text-decoration: none;
+           left: 1%;
+           top: 75px;
+           font-size: 20px;
+           transition: 0.5s ease-in-out;
+           border: 2px solid #fff;
+           border-radius: 10px;
+           background-color: #0a5;
+           padding: 5px;
+           width: 50vw;
+       }
+
+       #place {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           margin: 0;
+           position: absolute;
+           color: #fff;
+           text-decoration: none;
+           left: 1%;
+           top: 120px;
+           font-size: 20px;
+           text-align: center;
+           width: 50vw;
+           transition: all 2s ease;
+       }
+
+       #place:hover {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           margin: 0;
+           position: absolute;
+           color: #fff;
+           text-decoration: none;
+           left: 1%;
+           top: 120px;
+           font-size: 20px;
+           transition: 0.5s ease-in-out;
+           border: 2px solid #fff;
+           border-radius: 10px;
+           background-color: #0a5;
+           padding: 5px;
+           text-align: center;
+           width: 50vw;
+       }
+
+       #propos {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           margin: 0;
+           position: absolute;
+           color: #fff;
+           text-decoration: none;
+           left: 1%;
+           top: 165px;
+           font-size: 20px;
+           width: 50vw;
+           text-align: center;
+           transition: all 2s ease;
+       }
+
+       #propos:hover {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           margin: 0;
+           position: absolute;
+           color: #fff;
+           text-decoration: none;
+           left: 1%;
+           top: 165px;
+           font-size: 20px;
+           transition: 0.5s ease-in-out;
+           border: 2px solid #fff;
+           border-radius: 10px;
+           background-color: #0a5;
+           padding: 5px;
+           text-align: center;
+           width: 50vw;
+       }
+
+       #reser {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           margin: 0;
+           position: absolute;
+           color: #fff;
+           text-decoration: none;
+           left: 1%;
+           top: 210px;
+           font-size: 20px;
+           text-align: center;
+           width: 50vw;
+           transition: 0.5s ease-in-out;
+       }
+
+       #reser:hover {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           margin: 0;
+           position: absolute;
+           color: #fff;
+           text-decoration: none;
+           left: 1%;
+           top: 210px;
+           font-size: 20px;
+           transition: 0.5s ease-in-out;
+           border: 2px solid #fff;
+           border-radius: 10px;
+           background-color: #0a5;
+           padding: 5px;
+           text-align: center;
+           width: 50vw;
+       }
+       span{
+            position: absolute;
+            color: #fff;
+            transform: translateX(-300px);
+            animation: horaire 7s ease-in-out 0.3s infinite  ;
+            bottom: 10px;
+        }
+        @-webkit-keyframes horaire{
+            100%{
+                transform: translateX(800px);
+                transition: 7s ease;
+            }
+        }
+        .reservation {
+            position: relative;
+            padding: 30px;
+            background-color:  #ffffff;
+            bottom: 10px;
+            width: 100%;
+            min-height: 250px;
+        }
+        h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 15px;
+            position: relative;
+            top: 15vh;
+            width: 400px;
+            left: 2%;
+            background-color:  #0a5;
+            padding: 25px;
+            font-size: 2em;
+        }
+         .fenetre {
+            position: absolute;
+           width: 300px;
+           height: 100vh;
+            background-color: #06063d;
+           
+           right: 1px;
+           z-index: 5;
+           visibility: visible;
+           transform: translateY(-200%);
+       }
+
+       .MENU_CLOSE {
+           width: 55px;
+           height: 55px;
+           position: absolute;
+           right: 20px;
+           border-radius: 100px;
+           top: 25px;
+           cursor: pointer;
+           visibility: hidden;
+           display: block;
+       }
+
+       .MENU_OPEN {
+           width: 55px;
+           height: 55px;
+           position: absolute;
+           right: 20px;
+           border-radius: 120px;
+           top: 25px;
+           cursor: pointer;
+           background-color: rgb(57, 58, 57);
+           visibility: visible;
+           display: block;
+       }
+       
+/* ------------------------------------------------------------------------------ */
+        label{
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+            font-size: 1.1em;
+            font-weight: normal;
+        }
+        select{
+            position: relative;
+            top: 1px;
+            width: 90px;
+            padding: 5px;
+            bottom: 5px;
+            height: 28px;
+        }
+        option{
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+               /* ------Axe BKO - SGOU--------------------------------------------- */
+        .A{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 40%;
+            top: 10px;
+            height: 15vh;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px; 
+            text-align: center;
+        }
+        #dep_A{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            left: 1px;
+            font-weight: normal;
+            display: inline-block;
+            font-weight: bold;
+        }
+        h3 {
+           position: relative;
+           top: 20px;
+        }
+        #dest_A{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.3em;
+            left: 10px;
+            font-weight: normal;
+            display: inline-block;
+            font-weight: bold;
+        }
+               /* ------Axe BKO -ABJN---------------------------------------------- */
+        .B{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 40%;
+            top: 120px;
+            height: 15vh;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px; 
+            text-align: center;
+        }
+        #dep_B{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            left: 0;
+            font-weight: normal;
+            display: inline-block;
+            text-align: center;
+            top: 15px;
+            font-weight: bold;
+
+        }
+        /* h3{
+           position: relative;
+        } */
+        #dest_B{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.3em;
+            left: 15px;
+            font-weight: normal;
+            display: inline-block;
+            text-align: center;
+            top: 25px;
+            font-weight: bold;
+
+        }
+               /* ------Axe BKO -Dkr---------------------------------------------- */
+        .C{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 40%;
+            top: 230px;
+            height: 15vh;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px; 
+            text-align: center;
+        }
+        #dep_C{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            left: 5px;
+            font-weight: normal;
+            display: inline-block;
+            text-align: center;
+            top: 20px;
+            font-weight: bold;
+        }
+        #dest_C{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.3em;
+            left: 5px;
+            font-weight: normal;
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+            top: 20px;
+        }
+               /* ------Axe BKO - Sksso---------------------------------------------- */
+        .D{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 40%;
+            top: 340px;
+            height: 15vh;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px; 
+            text-align: center;
+        }
+        #dep_D{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            left: 5px;
+            font-weight: normal;
+            display: inline-block;
+            text-align: center;
+            top: 20px;
+            font-weight: bold;
+        }
+        #dest_D{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.3em;
+            left: 5px;
+            font-weight: normal;
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+            top: 20px;
+        }
+               /* ------Axe BKO - Mti---------------------------------------------- */
+
+        .E{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 40%;
+            top: 450px;
+            height: 15vh;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px; 
+            text-align: center;
+        }
+        #dep_E{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            right: 10px;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            top: 20px;
+        }
+        #dest_E{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            left: 15px;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+        top: 20px;
+        }
+               /* ------Axe BKO - Klkro---------------------------------------------- */
+
+        .F{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 40%;
+            top: 560px;
+            height: 15vh;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px; 
+            text-align: center;
+        }
+        #dep_F{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            left: 5px;
+            font-weight: normal;
+            display: inline-block;
+            text-align: center;
+            top: 20px;
+            font-weight: bold;
+        }
+        #dest_F{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            left: 15px;
+            font-weight: normal;
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+            top: 20px;
+        }
+               /* ------Axe BKO - Lomé---------------------------------------------- */
+
+        .G{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 40%;
+            top: 670px;
+            height: 15vh;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px; 
+            text-align: center;
+        }
+        #dep_G{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            right: 15px;
+            font-weight: normal;
+            display: inline-block;
+            text-align: center;
+            top: 20px;
+            font-weight: bold;
+        }
+        #dest_G{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            left: 15px;
+            font-weight: normal;
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+            top: 20px;
+
+        }
+               /* ------Axe BKO - Ouaga---------------------------------------------- */
+ 
+        .H{
+            position: absolute;
+            border: 2px solid #fff;
+            width: 40%;
+            top: 780px;
+            height:15vh;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px; 
+            text-align: center;
+         }
+        #dep_H{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            left: 5px;
+            font-weight: normal;
+            display: inline-block;
+            text-align: center;
+            top: 20px;
+            font-weight: bold;
+        }
+        #dest_H{
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            left: 15px;
+            font-weight: normal;
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+            top: 20px;
+        }  
+        /* ------------Départ Jour Bko - Sgu */
+        .dep_jour_A{
+            position: absolute;
+            left: 45vw;border-radius: 10px;
+            border: 2px solid #fff;
+            top: 10px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        .dep_soir_A{
+            position: absolute;
+            left: 45vw;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            top: 60px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        /* ------------Départ Jour Bko - Abjn */
+        .dep_jour_B{
+            position: absolute;
+            left: 45vw;border-radius: 10px;
+            border: 2px solid #fff;
+            top: 120px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        .dep_soir_B{
+            position: absolute;
+            left: 45vw;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            top: 170px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        /* ------------Départ Jour Bko - Dakar*/
+        .dep_jour_C{
+            position: absolute;
+            left: 45vw;border-radius: 10px;
+            border: 2px solid #fff;
+            top: 230px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        .dep_soir_C{
+            position: absolute;
+            left: 45vw;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            top: 280px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        /* ------------Départ Jour Bko - Sksso*/
+        .dep_jour_D{
+            position: absolute;
+            left: 45vw;border-radius: 10px;
+            border: 2px solid #fff;
+            top: 340px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        .dep_soir_D{
+            position: absolute;
+            left: 45vw;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            top: 390px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        /* ------------Départ Jour Bko - Mopti*/
+        .dep_jour_E{
+            position: absolute;
+            left: 45vw;border-radius: 10px;
+            border: 2px solid #fff;
+            top: 450px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        .dep_soir_E{
+            position: absolute;
+            left: 45vw;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            top: 500px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        /* ------------Départ Jour Bko - Klkro*/
+        .dep_jour_F{
+            position: absolute;
+            left: 45vw;border-radius: 10px;
+            border: 2px solid #fff;
+            top: 560px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        .dep_soir_F{
+            position: absolute;
+            left: 45vw;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            top: 610px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        /* ------------Départ Jour Bko - Lomé*/
+        .dep_jour_G{
+            position: absolute;
+            left: 45vw;border-radius: 10px;
+            border: 2px solid #fff;
+            top: 670px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        .dep_soir_G{
+            position: absolute;
+            left: 45vw;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            top: 720px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        /* ------------Départ Jour Bko - Klkro*/
+        .dep_jour_H{
+            position: absolute;
+            left: 45vw;border-radius: 10px;
+            border: 2px solid #fff;
+            top: 780px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        .dep_soir_H{
+            position: absolute;
+            left: 45vw;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            top: 830px;
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+    }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header id="header">
+        <img src="picture/TRANSOFT_version_origi.PNG" class="LOGO" alt="MON_LOGO">
+        <p class="slogan">Do goodtravel</p>
+        <img src="picture/menu_A.jpg" alt="MENU_CLOSE" class="MENU_OPEN">
+        <img src="picture/menu_close.jpg" alt="MENU_CLOSE" class="MENU_CLOSE">
+    </header>
+    <div class="container">
+        <div class="row">
+
+            <div class="fenetre">
+                <ul>
+                    <li id="li_acc">
+                        <a href="Page_Accueil.html" class="acc" id="ACC">Accueil</a>
+                    </li>
+                    <li id="li_acc">
+                        <a href="Horaires.html" class="horaire" id="horaire">Horaires</a>
+                    </li>
+                    <li id="li_acc">
+                        <a href="place_disponible.php" class="place" id="place">Place disponible</a>
+                    </li>
+                    <li id="li_acc">
+                        <a href="Page_a_propos.html" class="propos" id="propos">A propos de nous</a>
+                    </li>
+                    <li id="li_acc">
+                        <a href="Page_Accueil.html" class="reser" id="reser">Reservation</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="reservation">
+                <h2>
+                    <span>
+                        Horaires des Voyages 
+                    </span>
+                </h2>
+            </div>
+            <div class="Tableau" class="container">
+                <!-- ---------Horaires de Voyages BKO - SGU-->
+                <div class="A">
+                    <h3 id="dep_A">Bamako - Ségou</h3><h3 id="dest_A"> </h3>
+                </div>
+                <div class="dep_jour_A">
+                    <label for="">Départs / jour</label>
+                    <select name="" id="">
+                        <option value="08 H 00">08 H 00</option>
+                        <option value="11 H 00">11 H 00</option>
+                        <option value="14 H 00">14 H 00</option>
+                    </select>
+                </div>
+                <div class="dep_soir_A">
+                    <label for="">Départs / soir</label>
+                    <select name="" id="">
+                        <option value="16 H 00">16 H 00</option>
+                        <option value="19 H 00">19 H 00</option>
+                        <option value="22 H 00">22 H 00</option>
+                    </select>
+                </div>
+                <!-- ----------------------//Horaires de voyages Bamako-Abijan--------------------- -->
+                
+                <div class="B">
+                    <h3 id="dep_B">Bamako - Abijan</h3><h3 id="dest_B"> </h3>
+                </div>
+                <div class="dep_jour_B">
+                    <label for="">Départs / jour</label>
+                    <select name="" id="">
+                        <option value="06 H 00">06 H 00</option>
+                        <option value="09 H 00">09 H 00</option>
+                        <option value="12 H 00">12 H 00</option>
+                    </select>
+                </div>
+                <div class="dep_soir_B">
+                    <label for="">Départs / soir</label>
+                    <select name="" id="">
+                        <option value="15 H 00">15 H 00</option>
+                        <option value="18 H 00">18 H 00</option>
+                        <option value="21 H 00">21 H 00</option>
+                    </select>
+                </div>
+            <!-- -----------------//Horaires de voyages BKO - Dakar------------ -->
+                <div class="C">
+                    <h3 id="dep_C">Bamako - Dakar</h3>
+                    <h3 id="dest_C"> </h3>
+                </div>
+                <div class="dep_jour_C">
+                    <label for="">Départs / jour</label>
+                    <select name="" id="">
+                        <option value="08 H 30">08 H 30</option>
+                        <option value="11 H 30">11 H 30</option>
+                        <option value="14 H 30">14 H 30</option>
+                    </select>
+                </div>
+                <div class="dep_soir_C">
+                    <label for="">Départs / soir</label>
+                    <select name="" id="">
+                        <option value="16 H 30">16 H 30</option>
+                        <option value="19 H 30">19 H 30</option>
+                        <option value="22 H 30">22 H300</option>
+                    </select>
+                </div>
+            <!-- -----------------//Horaires de voyages BKO - SKSO------------ -->
+                <div class="D">
+                    <h3 id="dep_D">Bamako - Sikasso</h3>
+                    <h3 id="dest_D"> </h3>
+                </div>
+                <div class="dep_jour_D">
+                    <label for="">Départs / jour</label>
+                    <select name="" id="">
+                        <option value="07 H 00">07 H 00</option>
+                        <option value="10 H 00">10 H 00</option>
+                        <option value="13 H 00">13 H 00</option>
+                    </select>
+                </div>
+                <div class="dep_soir_D">
+                    <label for="">Départs / soir</label>
+                    <select name="" id="">
+                        <option value="14 H 00">14 H 00</option>
+                        <option value="17 H 00">17 H 00</option>
+                        <option value="20 H 00">20 H 00</option>
+                    </select>
+                </div>
+                <!-- ---------Horaires de Voyages BKO - Mpt-->
+                <div class="E">
+                    <h3 id="dep_E">Bamako - Mopti</h3><h3 id="dest_E"> </h3>
+                </div>
+                <div class="dep_jour_E">
+                    <label for="">Départs / jour</label>
+                    <select name="" id="">
+                        <option value="08 H 00">08 H 00</option>
+                        <option value="11 H 00">11 H 00</option>
+                        <option value="14 H 00">14 H 00</option>
+                    </select>
+                </div>
+                <div class="dep_soir_E">
+                    <label for="">Départs / soir</label>
+                    <select name="" id="">
+                        <option value="16 H 00">16 H 00</option>
+                        <option value="19 H 00">19 H 00</option>
+                        <option value="22 H 00">22 H 00</option>
+                    </select>
+                </div>
+                <!-- ----------------------//Horaires de voyages Bamako-Klro--------------------- -->
+                
+                <div class="F">
+                    <h3 id="dep_F">Bamako - Koulikoro</h3><h3 id="dest_F"> </h3>
+                </div>
+                <div class="dep_jour_F">
+                    <label for="">Départs / jour</label>
+                    <select name="" id="">
+                        <option value="06 H 00">06 H 00</option>
+                        <option value="09 H 00">09 H 00</option>
+                        <option value="12 H 00">12 H 00</option>
+                    </select>
+                </div>
+                <div class="dep_soir_F">
+                    <label for="">Départs / soir</label>
+                    <select name="" id="">
+                        <option value="15 H 00">15 H 00</option>
+                        <option value="18 H 00">18 H 00</option>
+                        <option value="21 H 00">21 H 00</option>
+                    </select>
+                </div>
+            <!-- -----------------//Horaires de voyages BKO - Lomé------------ -->
+                <div class="G">
+                    <h3 id="dep_G">Bamako - Lomé</h3><h3 id="dest_G"></h3>
+                </div>
+                <div class="dep_jour_G">
+                    <label for="">Départs / jour</label>
+                    <select name="" id="">
+                        <option value="08 H 30">08 H 30</option>
+                        <option value="11 H 30">11 H 30</option>
+                        <option value="14 H 30">14 H 30</option>
+                    </select>
+                </div>
+                <div class="dep_soir_G">
+                    <label for="">Départs / soir</label>
+                    <select name="" id="">
+                        <option value="16 H 30">16 H 30</option>
+                        <option value="19 H 30">19 H 30</option>
+                        <option value="22 H 30">22 H300</option>
+                    </select>
+                </div>
+            <!-- -----------------//Horaires de voyages BKO - Ouaga------------ -->
+                <div class="H">
+                    <h3 id="dep_H">Bamako - Ouaga</h3><h3 id="dest_H"> </h3>
+                </div>
+                <div class="dep_jour_H">
+                    <label for="">Départs / jour</label>
+                    <select name="" id="">
+                        <option value="07 H 00">07 H 00</option>
+                        <option value="10 H 00">10 H 00</option>
+                        <option value="13 H 00">13 H 00</option>
+                    </select>
+                </div>
+                <div class="dep_soir_H">
+                    <label for="">Départs / soir</label>
+                    <select name="" id="">
+                        <option value="14 H 00">14 H 00</option>
+                        <option value="17 H 00">17 H 00</option>
+                        <option value="20 H 00">20 H 00</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script>
+        let Depart_A = "Bamako -";
+        let Destination_A = " Ségou";
+
+        let Depart_B = "Bamako -";
+        let Destination_B = " Abijan";
+
+        let Depart_C = "Bamako -";
+        let Destination_C = " Dakar";
+
+        let Depart_D = "Bamako -";
+        let Destination_D = " Sikasso";
+
+        let Depart_E = "Bamako -";
+        let Destination_E = " Mopti";
+
+        let Depart_F = "Bamako -";
+        let Destination_F = " Koulikoro";
+
+        let Depart_G = "Bamako -";
+        let Destination_G = " Lomé";
+
+        let Depart_H = "Bamako -";
+        let Destination_H = " Ouagadougou";
+        
+        // document.getElementById("dep_A").innerHTML = Depart_A;
+        // document.getElementById("dep_A").style.color= "#fff";
+        // document.getElementById("dep_A").style.display = "inline";
+        // document.getElementById("dep_A").style.fontSize = "2em";
+        // document.getElementById("dest_A").innerHTML = Destination_A;
+        // document.getElementById("dest_A").style.color = "#fff";
+        // document.getElementById("dest_A").style.display = "inline";
+        // document.getElementById("dest_A").style.fontSize = "2em";
+      
+        // document.getElementById("dep_B").innerHTML = Depart_B;
+        // document.getElementById("dep_B").style.color= "#fff";
+        // document.getElementById("dep_B").style.display = "inline";
+        // document.getElementById("dep_B").style.fontSize = "2em";
+        // document.getElementById("dest_B").innerHTML = Destination_B;
+        // document.getElementById("dest_B").style.color = "#fff";
+        // document.getElementById("dest_B").style.display = "inline";
+        // document.getElementById("dest_B").style.fontSize = "2em";
+    
+        // document.getElementById("dep_C").innerHTML = Depart_C;
+        // document.getElementById("dep_C").style.color= "#fff";
+        // document.getElementById("dep_C").style.display = "inline";
+        // document.getElementById("dep_C").style.fontSize = "2em";
+        // document.getElementById("dest_C").innerHTML = Destination_C;
+        // document.getElementById("dest_C").style.color = "#fff";
+        // document.getElementById("dest_C").style.display = "inline";
+        // document.getElementById("dest_C").style.fontSize = "2em";
+    
+        // document.getElementById("dep_D").innerHTML = Depart_D;
+        // document.getElementById("dep_D").style.color= "#fff";
+        // document.getElementById("dep_D").style.display = "inline";
+        // document.getElementById("dep_D").style.fontSize = "2em";
+        // document.getElementById("dest_D").innerHTML = Destination_D;
+        // document.getElementById("dest_D").style.color = "#fff";
+        // document.getElementById("dest_D").style.display = "inline";
+        // document.getElementById("dest_D").style.fontSize = "2em";
+        
+        // document.getElementById("dep_E").innerHTML = Depart_E;
+        // document.getElementById("dep_E").style.color= "#fff";
+        // document.getElementById("dep_E").style.display = "inline";
+        // document.getElementById("dep_E").style.fontSize = "2em";
+        // document.getElementById("dest_E").innerHTML = Destination_E;
+        // document.getElementById("dest_E").style.color = "#fff";
+        // document.getElementById("dest_E").style.display = "inline";
+        // document.getElementById("dest_E").style.fontSize = "2em";
+      
+        // document.getElementById("dep_F").innerHTML = Depart_F;
+        // document.getElementById("dep_F").style.color= "#fff";
+        // document.getElementById("dep_F").style.display = "inline";
+        // document.getElementById("dep_F").style.fontSize = "2em";
+        // document.getElementById("dest_F").innerHTML = Destination_F;
+        // document.getElementById("dest_F").style.color = "#fff";
+        // document.getElementById("dest_F").style.display = "inline";
+        // document.getElementById("dest_F").style.fontSize = "2em";
+    /*
+        document.getElementById("dep_G").innerHTML = Depart_G;
+        document.getElementById("dep_G").style.color= "#fff";
+        document.getElementById("dep_G").style.display = "inline";
+        document.getElementById("dep_G").style.fontSize = "2em";
+        document.getElementById("dest_G").innerHTML = Destination_G;
+        document.getElementById("dest_G").style.color = "#fff";
+        document.getElementById("dest_G").style.display = "inline";
+        document.getElementById("dest_G").style.fontSize = "2em";
+    
+        document.getElementById("dep_H").innerHTML = Depart_H;
+        document.getElementById("dep_H").style.color= "#fff";
+        document.getElementById("dep_H").style.display = "inline";
+        document.getElementById("dep_H").style.fontSize = "2em";
+        document.getElementById("dest_H").innerHTML = Destination_H;
+        document.getElementById("dest_H").style.color = "#fff";
+        document.getElementById("dest_H").style.display = "inline";
+        document.getElementById("dest_H").style.fontSize = "2em";*/
+
+        
+                    const menu_close = document.querySelector('.MENU_CLOSE');
+                    const menu_open = document.querySelector('.MENU_OPEN');
+                    const Window = document.querySelector('.fenetre');
+        menu_open.addEventListener('click', () => {
+                        Window.style.transform = "translateY(15%)";
+                    Window.style.transition = "1s ease-in-out";
+                    menu_open.style.visibility = "hidden";
+                    menu_close.style.visibility = "visible";
+        })
+        menu_close.addEventListener('click', () => {
+                        Window.style.transform = "translateY(-200%)";
+                    Window.style.transition = "1s ease-in-out";
+                    menu_open.style.visibility = "visible";
+                    menu_close.style.visibility = "hidden";
+        })
+            
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

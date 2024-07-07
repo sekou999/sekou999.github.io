@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Reservation setp3</title>
+    <!-- <link rel="stylesheet" href="Page_Reserva3.css"> -->
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    body{
+        background-color:#2632df;
+    }
+    label{
+        position: relative;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1em;
+        left: 100px;
+        border: 2px solid white;
+        padding: 5px;
+        border-radius: 20px;
+        top: 10px;
+    }   
+    #header {
+        position: absolute;
+        width: 100vw;
+        height: 100px;
+          background-color: #06063d;
+        z-index: 100;
+    } 
+ .LOGO {
+        position: absolute;
+        top: 1px;
+        width: 220px;
+    }
+                   .slogan{
+                color: floralwhite;
+                position: absolute;
+                font-size: 14px;
+                left:90px;
+                top: 65px;
+                font-weight: bold;
+                font-style: italic;
+
+               }
+    .reservation {
+        position: absolute;
+        padding: 40px;
+        background-color: dodgerblue;
+        top: 15%;
+        width: 100vw;
+    }
+    h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        text-align: center;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        position: relative;
+        width: 770px;
+        left: 20%;
+    }
+    fieldset{
+        position: absolute;
+        height: 400px;
+        width: 750px;
+        top: 35%;
+        padding: 25px 20px ;
+        left: 20%;
+        background: dodgerblue;
+        color: white;
+        border-radius: 5px;
+        border: 2px solid #fff;
+        border-radius: 10px;
+    }
+    input{
+        position: absolute;
+        left: 100px;
+    }
+    #v_jour{
+        position: relative;
+        left: 170px;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        border-radius: 10px;   
+        top: 10px;   
+    }
+    #v_nuit{
+        position: relative;
+        left: 166px;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        border-radius: 10px;
+        top: 10px;
+        
+    }
+
+    #Nom{
+        position: relative; 
+        left: 155px;
+        padding: 5px;
+        border-radius: 10px;
+        outline: 2px solid #0a5 ;
+        border: none ;
+        top: 10px;
+        width: 165px;
+    }
+    #Prenom{
+        position: relative;
+        left: 155px;
+        padding: 5px;
+        border-radius: 10px;
+        outline: 2px solid #0a5;
+        border: none;
+        top: 10px;
+        width: 165px;
+    }
+    #Contact{
+        position: relative;
+        left: 150px;
+        padding: 5px;
+        border-radius: 10px;
+        outline: 2px solid #0a5;
+        border: none;
+        top: 10px;
+        width: 165px;
+    }
+    #date{
+        position: relative;
+        left: 150px;
+        padding: 5px;
+        border-radius: 10px;
+        outline: 2px solid #0a5;
+        border: none;
+        top: 10px;
+        width: 165px;
+    }
+    #next {
+        padding: 10px 30px;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.5em;
+        cursor: pointer;
+        box-shadow: 3px 3px 3px #000;
+        background: #0a5;
+        transition: all 0.4s ease-in;
+        left: 75%;
+        top:60%;
+    }
+    #next:hover {
+        padding: 10px 30px;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.5em;
+        cursor: pointer;
+        box-shadow: 3px 3px 3px #000;
+        background: #A10;
+        transition: all 0.4s ease-in;
+        left: 75%;
+        top:60%;
+    }
+    #ld{
+        position: relative;
+        left: 150px;
+        padding: 5px;
+        border-radius: 10px;
+        outline: 2px solid #0a5;
+        border: none;
+        top: 10px;
+        width: 170px;
+
+    }
+    #la{
+        position: relative;
+        left: 150px;
+        padding: 5px;
+        border-radius: 10px;
+        outline: 2px solid #0a5;
+        border: none;
+        top: 10px;
+        width: 170px;
+    }
+    /* ------------------- Label_edit---------------- */
+    .nom{
+        position: relative;
+    
+        padding: 5px 43px;
+    }
+    .prenom{
+        position: relative;
+    
+        padding: 5px 35px;
+    }
+    .contact{
+        position: relative;
+    
+        padding: 5px 37px;
+    }
+    .la{
+        position: relative;
+    
+        padding: 5px 12px;
+    }
+    .DATE{
+        position: relative;
+    
+        padding: 5px 37px;
+    }
+    .nom:hover{
+        position: relative;
+        background-color:#0a5;
+        padding: 5px 43px;
+        
+    }
+    .prenom:hover{
+        position: relative;
+    
+        padding: 5px 35px;
+        background-color:#0a5;
+    }
+    .contact:hover{
+        position: relative;
+    
+        padding: 5px 37px;
+        background-color:#0a5;
+    }
+        .DATE:hover{
+        position: relative;
+        background-color:#0a5;
+        padding: 5px 37px;
+    }
+    .la:hover{
+        position: relative;
+    
+        padding: 5px 12px;
+        background-color:#0a5;
+    }
+    .ld:hover{
+        position: relative;
+    
+        /* padding: 5px 12px;
+        padding: 5px 12px; */
+        background-color:#0a5;
+    }
+    .VDJ:hover{
+        position: relative;
+    /*    
+        padding: 5px 12px; */
+        
+    }
+    .VDN:hover{
+        position: relative;
+    /*    
+        padding: 5px 12px; */
+        
+    }
+    li{
+        list-style: none;
+        
+    }
+    .acc{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 41%;
+        top: 30px;
+        font-size: 20px;
+        z-index: 100;
+    }
+    .acc:hover{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        padding: 5px;
+        color: #fff;
+        text-decoration: none;
+        left: 41%;
+        top: 30px;
+        font-size: 20px;
+        transition: 0.5s ease-in-out;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        background-color:#0a5;
+        
+    }
+    .horaire{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 51%;
+        top: 30px;
+        font-size: 20px;
+        z-index: 100;
+
+    }
+    .horaire:hover {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 51%;
+        top: 30px;
+        font-size: 20px;
+        transition: 0.5s ease-in-out;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        background-color: #0a5;
+        padding: 5px;
+        z-index: 100;
+
+    }
+    .place{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 60%;
+        top: 30px;
+        font-size: 20px;
+        z-index: 100;
+
+    }
+    .place:hover{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 60%;
+        top: 30px;
+        font-size: 20px;
+        transition: 0.5s ease-in-out;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        background-color: #0a5;
+        padding: 5px;
+    }
+    .propos{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 75%;
+        top: 30px;
+        font-size: 20px;
+        z-index: 100;
+
+    }
+    .propos:hover{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 75%;
+        top: 30px;
+        font-size: 20px;
+        transition: 0.5s ease-in-out;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background-color: #0a5;
+            padding: 5px;
+    }
+    .reser{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 91%;
+        top: 30px;
+        font-size: 20px;
+        z-index: 100;
+
+    }
+    .reser:hover{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 91%;
+        top: 30px;
+        font-size: 20px;
+        transition: 0.5s ease-in-out;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background-color: #0a5;
+            padding: 5px;
+    }
+                /* .fenetre{
+                position: absolute;
+                width: 300px;
+                height: 100vh;
+                background-color:rgb(57, 58, 57) ;
+                right: 1px;
+                z-index: 5;
+                visibility: visible;
+                 transform: translateX(100%); 
+                top: 16%;
+            } */
+            .MENU_CLOSE,.MENU_OPEN{
+                    visibility: hidden;
+            }
+        form{
+            position: absolute;
+            height: 400px;
+            width: 750px;
+            top: 0;
+            padding: 25px 20px ;
+            left: 0;
+            background: dodgerblue;
+            color: white;
+            border-radius: 5px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+
+        @media (max-width:1080px){
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+    #header {
+        position: relative;
+        min-height: 120px;
+        bottom: 10px;
+      background-color: #06063d;
+    }
+ .LOGO {
+        position: absolute;
+        top: 1px;
+        width: 220px;
+    }
+                   .slogan{
+                color: floralwhite;
+                position: absolute;
+                font-size: 14px;
+                left:90px;
+                top: 65px;
+                font-weight: bold;
+                font-style: italic;
+
+               }
+    #ACC{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        color: #fff;    
+        margin: 0;
+        text-decoration: none;
+        left: 1%;
+        top: 30px;
+        font-size: 20px;
+        padding: 5px;
+        transition: all 2s ease;
+        width: 50vw;
+        text-align: center;
+    }
+            #ACC:hover {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                padding: 5px;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 30px;
+                font-size: 20px;
+                transition: 0.5s ease-in-out;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                background-color: #0a5;
+                width: 50vw;
+                text-align: center;
+            }
+
+            #horaire {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 75px;
+                font-size: 20px;
+                text-align: center;
+                width: 50vw;
+                transition: all 2s ease;
+            }
+
+            #horaire:hover {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 75px;
+                font-size: 20px;
+                transition: 0.5s ease-in-out;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                background-color: #0a5;
+                padding: 5px;
+                width: 50vw;
+            }
+
+            #place {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 120px;
+                font-size: 20px;
+                text-align: center;
+                width: 50vw;
+                transition: all 2s ease;
+            }
+
+            #place:hover {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 120px;
+                font-size: 20px;
+                transition: 0.5s ease-in-out;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                background-color: #0a5;
+                padding: 5px;
+                text-align: center;
+                width: 50vw;
+            }
+
+            #propos {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 165px;
+                font-size: 20px;
+                width: 50vw;
+                text-align: center;
+                transition: all 2s ease;
+            }
+
+            #propos:hover {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left: 1%;
+                top: 165px;
+                font-size: 20px;
+                transition: 0.5s ease-in-out;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                background-color: #0a5;
+                padding: 5px;
+                text-align: center;
+                width: 50vw;
+            }
+
+            #reser {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left:1%;
+                top: 210px;
+                font-size: 20px;
+                text-align: center;
+                width: 50vw;
+                transition: 0.5s ease-in-out;
+            }
+            #reser:hover {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+                left:1%;
+                top: 210px;
+                font-size: 20px;
+                transition: 0.5s ease-in-out;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                background-color: #0a5;
+                padding: 5px;
+                text-align: center;
+                width: 50vw;
+            }
+            .fenetre{
+                position: absolute;
+                width: 300px;
+                height: 100vh;
+                 background-color: #06063d;
+                right: 1px;
+                z-index: 5;
+                visibility: visible;
+                transform: translateY(-100%);
+                top: 16%;
+            }
+            .MENU_CLOSE{
+                width:55px;
+                height:55px;
+                position: absolute;
+                right: 20px;
+                border-radius: 100px;
+                top: 35px;
+                cursor: pointer;
+                visibility: hidden;
+            }
+            .MENU_OPEN{
+                width:55px;
+                height:55px;
+                position: absolute;
+                right: 20px;
+                border-radius: 120px;
+                top: 35px;
+                cursor: pointer;
+                background-color:rgb(57, 58, 57) ;
+                visibility: visible;
+            }
+            .reservation {
+                position: relative;
+                padding: 30px;
+                background-color: dodgerblue;
+                bottom: 15px;
+            }
+            h2{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: #fff;
+                text-align: center;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                position: relative;
+                width: 100%;
+                left: 5%;
+            }
+            fieldset{
+                position: relative;
+                height: 60vh;
+                width: 90%;
+                top: 1%;
+                padding: 20px 10px ;
+                left: 5%;
+                background: dodgerblue;
+                color: white;
+                border-radius: 5px;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                
+            }
+            #Nom{
+                position: relative; 
+                left: 15%;
+                padding: 5px;
+                border-radius: 10px;
+                outline: 2px solid #0a5 ;
+                border: none ;
+                bottom: 10px;
+                width: 165px;
+            }
+            #Prenom{
+                position: relative;
+                left: 16%;
+                padding: 5px;
+                border-radius: 10px;
+                outline: 2px solid #0a5;
+                border: none;
+                bottom: 10px;
+                width: 165px;
+            }
+            #Contact{
+                position: relative;
+                left: 15%;
+                padding: 5px;
+                border-radius: 10px;
+                outline: 2px solid #0a5;
+                border: none;
+                bottom: 10px;
+                width: 165px;
+            }
+            #v_jour{
+                position: relative;
+                left: 20%;
+                width: 20px;
+                height: 20px;
+                padding: 5px;
+                border-radius: 10px;   
+                
+            }
+
+            #v_nuit{
+                position: relative;
+                left: 20%;
+                width: 20px;
+                height: 20px;
+                padding: 5px;
+                border-radius: 10px;
+                
+            }
+            
+            #ld{
+                position: relative;
+                left: 20%;
+                padding: 5px;
+                border-radius: 10px;
+                outline: 2px solid #0a5;
+                border: none;
+                bottom: 10px;
+                width: 170px;
+            }
+            #la{
+                position: relative;
+                left: 20%;
+                padding: 5px;
+                border-radius: 10px;
+                outline: 2px solid #0a5;
+                border: none;
+                bottom: 10px;
+                width: 170px;
+            }
+            label{
+                position: relative;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 1em;
+                left: 10%;
+                border: 2px solid white;
+                padding: 5px;
+                border-radius: 15px;
+                top: 10px;
+            }  
+            input,select{
+                position: absolute;
+                right: 2%;
+                top: 10px;
+            }
+    #next {
+        position: absolute;
+        padding: 5px 15px;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 3px 3px 3px #000;
+        background: #0a5;
+        transition: all 0.4s ease-in;
+        left: 65%;
+        top: 310px;
+        width: 100px;
+        height: 50px;
+    }
+    #next:hover {
+        position: absolute;
+        padding: 5px 15px;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 3px 3px 3px #000;
+        background: #A10;
+        transition: all 0.4s ease-in;
+       left: 65%;
+        top: 310px;
+        width: 100px;
+        height: 50px;
+    }
+            input{
+                position: absolute;
+                left: 100px;
+            }
+        }
+
+</style>
+</head>
+<body>
+    <header id="header">
+        <img src="picture/TRANSOFT_version_origi.PNG" class="LOGO" alt="MON_LOGO">
+        <p class="slogan">Do goodtravel</p>
+        <img src="picture/menu_A.jpg" alt="MENU_CLOSE" class="MENU_OPEN">
+        <img src="picture/menu_close.jpg" alt="MENU_CLOSE" class="MENU_CLOSE">
+    </header>
+    <div class="fenetre">
+        <ul>
+            <li id="li_acc">
+                <a href="Page_Accueil.html" class="acc" id="ACC">Accueil</a>
+            </li>
+            <li id="li_acc">
+                <a href="Horaires.html" class="horaire" id="horaire">Horaires</a>
+            </li>
+            <li id="li_acc">
+                <a href="place_disponible.php" class="place" id="place">Place disponible</a>
+            </li>
+            <li id="li_acc">
+                <a href="Page_a_propos.html" class="propos" id="propos">A propos de nous</a>
+            </li>
+            <li id="li_acc">
+                <a href="Page_Reserva_1.html" class="reser" id="reser">Reservation</a>
+            </li>
+        </ul>
+</div>
+  
+    <div class="reservation">
+        <h2>RESERVEZ VOTRE BILLET ICI</h2>
+    </div>
+    <fieldset>
+        <form action="page_Reserva_4.php" method="post">
+            <label for="Nom" class="nom">Nom </label>
+            <input type="text" name="nom" id="Nom" required><br><br>
+            <label for="Prenom" class="prenom">Prenom </label>
+            <input type="text" name="prenom" id="Prenom" required><br><br>
+            <label for="Contact" class="contact">Contact</label>
+            <input type="text" name="contact" id="Contact" required><br><br>
+            <label for="lieu_depart" class="ld">Lieu de Départ</label>
+            <select name="lieu_depart" id="ld" required>
+                    <option value="BAMAKO">BAMAKO</option>
+                    <!-- <option value="KAYES">KAYES</option>
+                    <option value="KOULIKORO">KOULIKORO</option>
+                    <option value="SIKASSO">SIKASSO</option>
+                    <option value="SEGOU">SEGOU</option>
+                    <option value="MOPTI">MOPTI</option>
+                    <option value="GAO">GAO</option>
+                    <option value="TOMBOUCTOU">TOMBOUCTOU</option> -->
+                </optgroup>
+                    <option value="OUAGADOUGOU">OUAGADOUGOU</option>
+                    <option value="ABIJAN">ABIJAN</option>
+                    <option value="COTONU">COTONU</option>
+                    <option value="LOME">LOME</option>
+                    <option value="DAKAR">DAKAR</option>
+                    <option value="NOUAKCHOUAT">NOUAKCHOUAT</option>
+                    <option value="ACCRA">ACCRA</option>
+                    <option value="NIAMEY">NIAMEY</option>
+                </optgroup>
+            </select><br><br>
+            <label for="lieu_arriver" class="la">Lieu d'Arriver</label>
+            <select name="lieu_arriver" id="la">
+                    <option value="KAYES">KAYES</option>
+                    <option value="KOULIKORO">KOULIKORO</option>
+                    <option value="SIKASSO">SIKASSO</option>
+                    <option value="SEGOU">SEGOU</option>
+                    <option value="MOPTI">MOPTI</option>
+                    <option value="GAO">GAO</option>
+                    <option value="TOMBOUCTOU">TOMBOUCTOU</option>
+                </optgroup>
+                    <option value="BURKINA FASO">BURKINA FASO</option>
+                    <option value="COTE D'IVOIRE">KAYES</option>
+                    <option value="BENIN">BENIN</option>
+                    <option value="TOGO">TOGO</option>
+                    <option value="SENEGAL">SENEGAL</option>
+                    <option value="MAURITANIE">MAURITANIE</option>
+                    <option value="GHANA">GHANA</option>
+                    <option value="NIGER">NIGER</option>
+                </optgroup>
+            </select><br><br>
+            <label for="v_jour" class="VDJ">Voyage De Jour</label>
+            <input type="radio" name="voyage" id="v_jour" value="Voyage De Jour"><br><br>
+            <label for="v_nuit" class="VDN">Voyage De Nuit</label>
+            <input type="radio" name="voyage" id="v_nuit" value="Voyage De Nuit"><br><br>
+            <label for="date" class="DATE">Date</label>
+            <input type="date" id="date" name="date">
+        
+            <input type="submit" value="suivant" name="suivant" id="next">
+           
+        </form>
+    </fieldset>
+   
+    <script>
+        const menu_close = document.querySelector('.MENU_CLOSE');
+        const menu_open = document.querySelector('.MENU_OPEN');
+        const Window = document.querySelector('.fenetre');
+        menu_open.addEventListener('click', () => {
+            Window.style.transform = "translateY(1%)";
+            Window.style.transition = "0.5s ease-in-out";
+            menu_open.style.visibility = "hidden";
+            menu_close.style.visibility = "visible";
+        })
+        menu_close.addEventListener('click', () => {
+            Window.style.transform = "translateY(-100%)";
+            Window.style.transition = "0.5s ease-in-out";
+            menu_open.style.visibility = "visible";
+            menu_close.style.visibility = "hidden";
+        })
+    </script>
+</body>
+</html>
